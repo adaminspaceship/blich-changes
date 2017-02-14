@@ -29,21 +29,22 @@ soup.original_encoding
 'WINDOWS-1255'
 
 table = soup("td", {'class' : 'DisplayFreeChange' })
-
+messagenot = "Not today motherfucka!"
 
 #testing if test found in table0
 try:
-    table0 = table[0]
+    table0 = table[1]
     
 except:
     print "No free lesson found"
+    server.sendmail(fromaddr, toaddrs, messagenot)
 else:
     print "Free lesson found!"
     table0str = str(table0)
     table0strdone = re.sub('<[^>]*>', '', table0str)
     subject = "ביטול במערכת שעות"
     message = 'Subject: {}\n\n{}'.format(subject, table0strdone)
-    #server.sendmail(fromaddr, toaddrs, message)
+    server.sendmail(fromaddr, toaddrs, message)
     print (table0strdone)
     ifttt.trigger(value1=table0strdone)
 	

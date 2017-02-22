@@ -9,6 +9,7 @@ import datetime
 import sys
 import calendar
 
+
 classnum = "3"
 
 #######################################################################################################################################
@@ -76,7 +77,7 @@ def alarm():
 			hour2 = hour1 + 1
 			minute2 = minute1 + 1
 			hour2str = str(hour2)
-			print "Free Lesson Found... Waking up at " + hour2str
+			print "Free Lesson Found... Waking up at " + hour2str + ":00"
 			not_executed = 3
 			while(not_executed == 3):
 				dt = list(time.localtime())
@@ -84,11 +85,13 @@ def alarm():
 				minute = dt[4]
 				time.sleep(5)
 				if (hour == hour1) and (minute == minute2):
-					print "Wake Up!"
+					print "Wake Up!      press ⌘ C  "
+					os.system("afplay /Users/adam/Desktop/a.mp3")
 					not_executed = 0
 			
 		elif (hour == hour1) and (minute == minute1) and (FreeLesson() == False):
 			print "Wake up, first hour!"
+			os.system("afplay /Users/adam/Desktop/a.mp3")
 		
 	
 			

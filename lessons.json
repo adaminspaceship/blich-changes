@@ -1,0 +1,50 @@
+{
+	"Sunday":{
+		"1":"arabic or french",
+		"2":"arabic or french",
+		"3":"field-nation-society",
+		"4":"Civics",
+		"5":"bible stories",
+		"6":"math",
+		"7":"math"
+	},
+
+	"Monday":{
+		"1":"physics",
+		"2":"Civics",
+		"3":"math",
+		"4":"math",
+		"5":"sport",
+		"6":"Jewish civil law",
+		"7":"education"
+	},
+
+	"Tuesday":{
+		"1":"biology",
+		"2":"history",
+		"3":"english",
+		"4":"english",
+		"5":"hebrew",
+		"6":"Jewish civil law"
+	},
+	"Wednesday":{
+		"1":"english",
+		"2":"english",
+		"3":"chemistry",
+		"4":"math",
+		"5":"math",
+		"6":"sport",
+		"7":"biologyorchemistry"
+	},
+	"Thursday":{
+		"1":"bible",
+		"2":"bible",
+		"3":"literature",
+		"4":"hebrew",
+		"5":"history",
+		"6":"physics",
+		"7":"english"
+	}
+
+
+}

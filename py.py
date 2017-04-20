@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 import SocketServer
@@ -8,25 +13,6 @@ import calendar
 my_date = date.today()
 day = calendar.day_name[my_date.weekday()]
 
-
-
-
-array = []
-
-#for i in dayjson.values():
- #   array.append(i)
-
-
-newest = "".join(array)
-
-mydata = '''
-{
-"speech": '''+newest+''',
-"displayText": '''+newest+''',
-"data": {},
-"contextOut": [],
-"source": "DuckDuckGo"
-}'''
 
 class S(BaseHTTPRequestHandler):
     def _set_headers(self):
@@ -58,11 +44,23 @@ class S(BaseHTTPRequestHandler):
             data = json.load(data_file)
 
 
-        datagot = json.load(jsonload)
-        timenow = datagot["result"]["parameters"]["number"].values()
+        datagot = json.loads(strjsonload)
+        #print datagot
+        timenow = datagot["result"]["parameters"]["number"]
         dayjson = data[day][timenow]
 
-        print dayjson
+        #print dayjson
+        
+		
+
+        mydata = '''
+        {
+        "speech": "יש לך שיעור ב%(foo)s",
+        "displayText": "%(foo)s",
+        "data": {},
+        "contextOut": [],
+        "source": "משוב"
+        }'''% {'foo': dayjson}
 
 
 
@@ -76,6 +74,7 @@ def run(server_class=HTTPServer, handler_class=S, port=80):
     httpd = server_class(server_address, handler_class)
     print 'Starting httpd...'
     httpd.serve_forever()
+
 
 if __name__ == "__main__":
     from sys import argv

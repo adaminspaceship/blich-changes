@@ -40,27 +40,33 @@ class S(BaseHTTPRequestHandler):
         strjsonload = str(jsonload)
         print("\n<----- Request End -----\n")
 
+       
+            
+        #
+        datagot = json.loads(strjsonload)
+        
         with open('lessons.json') as data_file:  
             data = json.load(data_file)
-
-
-        datagot = json.loads(strjsonload)
+			
+		
         #print datagot
         timenow = datagot["result"]["parameters"]["number"]
-        dayjson = data[day][timenow]
-
+        
+        dayjson = data[day][timenow]["lesson"]
+        teachjson = data[day][timenow]["teacher"]
+		
         #print dayjson
         
 		
 
         mydata = '''
         {
-        "speech": "יש לך שיעור ב%(foo)s",
+        "speech": "יש לך שיעור ב%(foo)s עם המורה %(teach)s",
         "displayText": "%(foo)s",
         "data": {},
         "contextOut": [],
         "source": "משוב"
-        }'''% {'foo': dayjson}
+        }'''% {'foo': dayjson,'teach':teachjson}
 
 
 

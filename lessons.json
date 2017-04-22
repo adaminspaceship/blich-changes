@@ -1,5 +1,5 @@
 {
-	"Sunday":{
+	"1":{
 		"1":{
 			"lesson" : "ערבית",
 			"teacher" : "מירב כהן"
@@ -29,7 +29,7 @@
 			"teacher" : "איריס רסיוק-דיין"
 		}
 	},
-	"Monday":{
+	"2":{
 		"1":{
 			"lesson" : "פיזיקה",
 			"teacher" : "שרון עצמון"
@@ -59,7 +59,7 @@
 			"teacher" : "עידית זילברמן"
 		}
 	},
-	"Tuesday":{
+	"3":{
 		"1":{
 			"lesson" : "ביולוגיה",
 			"teacher" : "חני מימון"
@@ -85,7 +85,7 @@
 			"teacher" : "חן שריג"
 		}
 	},
-	"Wednesday":{
+	"4":{
 		"1":{
 			"lesson" : "אנגלית",
 			"teacher" : "רודה טנזי"
@@ -116,13 +116,13 @@
 			"teacher" : "חני מימון או עידית זילברמן"
 		}
 	},
-	"Thursday":{
+	"5":{
 		"1" : {
-			"lesson" : "סיפורי תנך",
+			"lesson" : "תנך",
 			"teacher" : "הגר חאנגרי"
 		},
 		"2":{
-			"lesson" : "סיפורי תנך",
+			"lesson" : "תנך",
 			"teacher" : "הגר חאנגרי"
 		},
 		"3":{
@@ -144,6 +144,36 @@
 		"7":{
 			"lesson" : "אנגלית",
 			"teacher" : "רודה טנזי"
+		}
+	},
+	"null":{
+		"1" : {
+			"lesson" : "null",
+			"teacher" : "null"
+		},
+		"2":{
+			"lesson" : "null",
+			"teacher" : "null"
+		},
+		"3":{
+			"lesson" : "null",
+			"teacher" : "null"
+		},
+		"4":{
+			"lesson" : "null",
+			"teacher" : "null"
+		},
+		"5":{
+			"lesson" : "null",
+			"teacher" : "null"
+		},
+		"6":{
+			"lesson" : "null",
+			"teacher" : "null"
+		},
+		"7":{
+			"lesson" : "null",
+			"teacher" : "null"
 		}
 	}
 }

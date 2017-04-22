@@ -4,17 +4,21 @@
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
+import re
 
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 import SocketServer
 import json
-from datetime import date
+import datetime
 import calendar
-my_date = date.today()
-day = calendar.day_name[my_date.weekday()]
+day = datetime.datetime.today().weekday()
+
+
 
 
 class S(BaseHTTPRequestHandler):
+
+    
     def _set_headers(self):
         self.send_response(200)
         self.send_header('Content-type', 'application/json')
@@ -26,8 +30,11 @@ class S(BaseHTTPRequestHandler):
 
     def do_HEAD(self):
         self._set_headers()
+	
+	
         
     def do_POST(self):
+
         #prints posted data
         print("\n----- Request Start ----->\n")
 
@@ -47,13 +54,27 @@ class S(BaseHTTPRequestHandler):
         
         with open('lessons.json') as data_file:  
             data = json.load(data_file)
-			
+		
+		
 		
         #print datagot
+        
         timenow = datagot["result"]["parameters"]["number"]
         
-        dayjson = data[day][timenow]["lesson"]
-        teachjson = data[day][timenow]["teacher"]
+        rex1  = re.compile('(?<=\"P1\": \")[a-zA-Z_\- ]+(?=\")')
+		
+		
+        
+        datenow = datagot["result"]["parameters"]["number1"]
+        datastrr = str(data)
+        rex2 = rex1.findall(datastrr)  
+        print(rex2)
+        
+        
+        dayjson = data[datenow][timenow]["lesson"]
+        teachjson = data[datenow][timenow]["teacher"]
+        
+        
 		
         #print dayjson
         
@@ -67,13 +88,15 @@ class S(BaseHTTPRequestHandler):
         "contextOut": [],
         "source": "משוב"
         }'''% {'foo': dayjson,'teach':teachjson}
-
+		
 
 
         #POST response
 
         self._set_headers()
         self.wfile.write(mydata)
+        
+
         
 def run(server_class=HTTPServer, handler_class=S, port=80):
     server_address = ('', port)

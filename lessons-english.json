@@ -1,145 +1,46 @@
 {
-	"1":{
-		"1":{
-			"lesson" : "arabic"
-		},
-		"2":{
-			"lesson" : "arabic"
-		},
-		"3":{
-			"lesson" : "shela"
-		},
-		"4":{
-			"lesson" : "civics"
-		},
-		"5":{
-			"lesson" : "bible stories"
-		},
-		"6":{
-			"lesson" : "math"
-		},
-		"7":{
-			"lesson" : "math"
-		}
-	},
-	"2":{
-		"1":{
-			"lesson" : "physics" 
-		},
-		"2":{
-			"lesson" : "civics"
-		},
-		"3":{
-			"lesson" : "math"
-		},
-		"4":{
-			"lesson" : "math"
-		},
-		"5":{
-			"lesson" : "sport"
-		},
-		"6":{
-			"lesson" : "jewish civil law"
-		},
-		"7":{
-			"lesson" : "education"
-		}
-	},
-	"3":{
-		"1":{
-			"lesson" : "biology"
-		},
-		"2":{
-			"lesson" : "history"
-		},
-		"3":{
-			"lesson" : "english"
-		},
-		"4":{
-			"lesson" : "english"
-		},
-		"5":{
-			"lesson" : "linguistics"
-		},
-		"6":{
-			"lesson" : "jewish civil law"
-		}
-	},
-	"4":{
-		"1":{
-			"lesson" : "english"
-		},
-		"2":{
-			"lesson" : "english"
-		},
-		"3":{
-			"lesson" : "chemistry"
-		},
-
-		"4":{
-			"lesson" : "math"
-		},
-		"5":{
-			"lesson" : "math"
-		},
-		"6":{
-			"lesson" : "sport"
-		},
-		"7":{
-			"lesson" : "biology or chemistry"
-		}
-	},
-	"5":{
-		"1" : {
-			"lesson" : "bible"
-		},
-		"2":{
-			"lesson" : "bible"
-		},
-		"3":{
-			"lesson" : "literature"
-		},
-		"4":{
-			"lesson" : "linguistics"
-		},
-		"5":{
-			"lesson" : "history"
-		},
-		"6":{
-			"lesson" : "physics"
-		},
-		"7":{
-			"lesson" : "english"
-		}
-	},
-	"null":{
-		"1" : {
-			"lesson" : "null",
-			"teacher" : "null"
-		},
-		"2":{
-			"lesson" : "null",
-			"teacher" : "null"
-		},
-		"3":{
-			"lesson" : "null",
-			"teacher" : "null"
-		},
-		"4":{
-			"lesson" : "null",
-			"teacher" : "null"
-		},
-		"5":{
-			"lesson" : "null",
-			"teacher" : "null"
-		},
-		"6":{
-			"lesson" : "null",
-			"teacher" : "null"
-		},
-		"7":{
-			"lesson" : "null",
-			"teacher" : "null"
-		}
-	}
+  "1": {
+  "1": "arabic",
+  "2": "arabic",
+  "3": "shelah",
+  "4": "civics",
+  "5": "bible stories",
+  "6": "math",
+  "7":"math"
+  },
+  "2": {
+  "1": "physics",
+  "2": "civics",
+  "3": "math",
+  "4": "math",
+  "5": "sport",
+  "6": "jewish civil law",
+  "7":"education"
+  },
+  "3": {
+  "1": "biology",
+  "2": "history",
+  "3": "english",
+  "4": "english",
+  "5": "linguistics",
+  "6": "jewish civil law"
+  },
+  "4": {
+  "1": "english",
+  "2": "english",
+  "3": "chemistry",
+  "4": "math",
+  "5": "math",
+  "6": "sport",
+  "7":"biology or chemistry"
+  },
+  "5": {
+  "1": "bible",
+  "2": "bible",
+  "3": "literature",
+  "4": "linguistics",
+  "5": "history",
+  "6": "physics",
+  "7":"english"
+  }
 }
